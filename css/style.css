@@ -1,0 +1,50 @@
+/* –––––––––– COLORS –––––––––– */
+header.calc .col:nth-of-type(1) a, header.tip .col:nth-of-type(2) a {
+	color: #fe9400;
+}
+body {
+	background: #ffb751;
+}
+/* –––––––––– TEXT –––––––––– */
+* {
+    -webkit-font-smoothing: antialiased;
+}
+body {
+	font-family: proxima-nova, sans-serif;
+}
+/* –––––––––– HEADER –––––––––– */
+header p {
+    text-align: center;
+    padding: 12px 0;
+}
+header a {
+    color: #787878;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    padding: 12px 0;
+}
+div#bar {
+    height: 2px;
+    background: #4b4b4b;
+    position: relative;
+}
+.fill {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: #fe9400;
+    left: 0;
+}
+/* –––––––––– CALCULATOR –––––––––– */
+#calculator {
+    background: #1e1e1e;
+    color: #fff;
+    width: 100%;
+    max-width: 414px;
+    padding: 12px 24px;
+    margin-top: 20px;
+    border-radius: 12px;
+}
+/* –––––––––– TIP HELPER –––––––––– */
