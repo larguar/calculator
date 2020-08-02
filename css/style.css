@@ -1,5 +1,5 @@
 /* –––––––––– COLORS –––––––––– */
-header.calc .col:nth-of-type(1) a, header.tip .col:nth-of-type(2) a {
+div#pre, header.calc p:nth-of-type(1) a, header.tip p:nth-of-type(2) a {
 	color: #fe9400;
 }
 body {
@@ -16,6 +16,8 @@ body {
 header p {
     text-align: center;
     padding: 12px 0;
+    width: 49.35%;
+    display: inline-block;
 }
 header a {
     color: #787878;
@@ -37,14 +39,175 @@ div#bar {
     background: #fe9400;
     left: 0;
 }
-/* –––––––––– CALCULATOR –––––––––– */
+/* –––––––––– GENERAL –––––––––– */
 #calculator {
     background: #1e1e1e;
-    color: #fff;
     width: 100%;
-    max-width: 414px;
-    padding: 12px 24px;
-    margin-top: 20px;
+    max-width: 327px;
+    padding: 24px 24px 36px;
+    margin: 20px auto 0;
     border-radius: 12px;
 }
+.summary {
+    padding: 70px 0 40px;
+}
+div#pre {
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+div#numbers {
+    text-align: center;
+    font-size: 56px;
+    font-weight: 300;
+    color: #fff;
+}
+/* –––––––––– CALCULATOR –––––––––– */
+.calc-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 16px;
+    margin-bottom: 14px;
+}
+button {
+    width: 25%;
+    height: 60px;
+    border: 1px solid #1e1e1e;
+    background: #3f3f3f;
+    color: #fff;
+    font-size: 24px;
+    padding: 0;
+    cursor: pointer;
+}
+button.wide {
+    width: 50%;
+    text-align: right;
+    padding: 0 33px;
+}
+button.light-gray {
+	background: #8b8b8b;
+}
+button.orange {
+	background: #fe9400;
+}
+button:focus {
+    outline: none;
+}
+button.corner1 {
+    border-radius: 8px 0 0 0;
+}
+button.corner2 {
+    border-radius: 0 8px 0 0;
+}
+button.corner3 {
+    border-radius: 0 0 0 8px;
+}
+button.corner4 {
+    border-radius: 0 0 8px 0;
+}
 /* –––––––––– TIP HELPER –––––––––– */
+.tip-container {
+    margin-bottom: 30px;
+}
+.results {
+    font-size: 20px;
+    color: #a5a5a5;
+    padding: 8px 0;
+}
+.results span {
+    float: right;
+    font-weight: 500;
+    color: #fff;
+}
+.results:nth-of-type(2) {
+    margin-bottom: 6px;
+}
+input[type=range] {
+    margin: auto;
+    outline: none;
+    padding: 0;
+    width: calc(100% - 50px);
+    height: 8px;
+    border: none;
+    background-color: #4b4b4b;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fe9400), color-stop(100%, #fe9400));
+    background-image: -webkit-linear-gradient(#fe9400, #fe9400);
+    background-image: -moz-linear-gradient(#fe9400, #fe9400);
+    background-image: -o-linear-gradient(#fe9400, #fe9400);
+    background-image: linear-gradient(#fe9400, #fe9400);
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    -webkit-appearance: none;
+}
+input[type=range]::-moz-range-track {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+input[type=range]::-moz-focus-outer {
+    border: 0;
+}
+input[type=range]::-webkit-slider-thumb {
+    width: 14px;
+    height: 14px;
+    border: 0;
+    background: #fff;
+    border-radius: 100%;
+    box-shadow: 0 0 1px 0px rgba(0,0,0,0.1);
+    -webkit-appearance: none;
+}
+input[type=range]::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border: 0;
+    background: #fff;
+    border-radius: 100%;
+    box-shadow: 0 0 1px 0px rgba(0,0,0,0.1);
+}
+.form-field.padded {
+    padding: 12px 0;
+}
+#percent-number, #people-number {
+    display: inline-block;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    margin-left: 6px;
+    width: 38px;
+}
+label {
+	font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.75px;
+	display: block;
+    color: #787878;
+    margin: 20px 0 10px;
+}
+input[type="number"] {
+    width: 100%;
+    border: none;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 3px;
+    text-align: center;
+    color: #1e1e1e;
+}
+input[type="number"]:focus {
+    outline: none;
+}
