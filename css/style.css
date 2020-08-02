@@ -9,14 +9,18 @@ body {
 * {
     -webkit-font-smoothing: antialiased;
 }
-body {
-	font-family: proxima-nova, sans-serif;
+html, body, input, button {
+	font-family: proxima-nova, sans-serif!important;
 }
 /* –––––––––– HEADER –––––––––– */
+header {
+	display: flex;
+    flex-wrap: wrap;
+}
 header p {
     text-align: center;
-    padding: 12px 0;
-    width: 49.35%;
+    padding: 10px 0;
+    width: 50%;
     display: inline-block;
 }
 header a {
@@ -25,12 +29,13 @@ header a {
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.3px;
-    padding: 12px 0;
+    padding: 10px 0;
 }
 div#bar {
     height: 2px;
     background: #4b4b4b;
     position: relative;
+    width: 100%;
 }
 .fill {
     position: absolute;
@@ -43,10 +48,13 @@ div#bar {
 #calculator {
     background: #1e1e1e;
     width: 100%;
-    max-width: 327px;
+    max-width: 260px;
     padding: 24px 24px 36px;
-    margin: 20px auto 0;
-    border-radius: 12px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 .summary {
     padding: 70px 0 40px;
@@ -70,7 +78,7 @@ div#numbers {
     display: flex;
     flex-wrap: wrap;
     margin-top: 16px;
-    margin-bottom: 14px;
+    margin-bottom: -2px;
 }
 button {
     width: 25%;
@@ -82,10 +90,19 @@ button {
     padding: 0;
     cursor: pointer;
 }
+button.operator, button.equal {
+    font-size: 26px;
+}
+button.negative {
+    font-size: 22px;
+}
+button.clear {
+    font-size: 20px;
+}
 button.wide {
     width: 50%;
     text-align: right;
-    padding: 0 33px;
+    padding: 0 24px;
 }
 button.light-gray {
 	background: #8b8b8b;
@@ -110,20 +127,16 @@ button.corner4 {
 }
 /* –––––––––– TIP HELPER –––––––––– */
 .tip-container {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .results {
     font-size: 20px;
     color: #a5a5a5;
-    padding: 8px 0;
+    padding: 8px 5px;
 }
 .results span {
     float: right;
-    font-weight: 500;
     color: #fff;
-}
-.results:nth-of-type(2) {
-    margin-bottom: 6px;
 }
 input[type=range] {
     margin: auto;
@@ -210,4 +223,33 @@ input[type="number"] {
 }
 input[type="number"]:focus {
     outline: none;
+}
+.symbol {
+    position: absolute;
+    font-size: 20px;
+    line-height: 52px;
+    padding: 0 65px 0 15px;
+    background: linear-gradient(90deg, white 40%, transparent);
+    color: #999;
+    border-radius: 15px;
+}
+@media screen and (max-width: 575px) {
+	#calculator {
+	    background: transparent;
+	    width: 100%;
+	    max-width: 90vw;
+	    padding: 24px 0 36px;
+	    border-radius: 0;
+	    position: relative;
+	    top: 0;
+	    left: 0;
+	    transform: translate(0,0);
+	    margin: 0 auto;
+	}
+	body {
+	    background: #1e1e1e;
+	}
+}
+@media screen and (max-width: 320px) {
+
 }

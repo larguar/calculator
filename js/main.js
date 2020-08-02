@@ -12,7 +12,7 @@ function populateCalcContent() {
 <div class="controls">
 	<form class="calc-container">
 		<button class="clear light-gray corner1">AC</button>	
-		<button class="clear light-gray">+/–</button>
+		<button class="negative light-gray">+/–</button>
 		<button class="operator light-gray">^</button>
 		<button class="operator orange corner2">÷</button>
 		<button class="number gray">7</button>	
@@ -43,6 +43,7 @@ function populateTipContent() {
 	<form class="tip-container">
 		<div class="form-field">				
 			<label>Bill Amount</label>
+			<div class="symbol">$</div>
 			<input class="bill-input" type="number">
 		</div>
 		<label>Tip</label>
