@@ -67,9 +67,10 @@ div#pre {
     letter-spacing: 0.5px;
     margin-bottom: 12px;
 }
-div#numbers {
+div#numbers, div#result {
     text-align: center;
     font-size: 56px;
+    line-height: 56px;
     font-weight: 300;
     color: #fff;
 }
@@ -84,16 +85,19 @@ button {
     width: 25%;
     height: 60px;
     border: 1px solid #1e1e1e;
-    background: #3f3f3f;
+    background: rgba(63,63,63,1);
     color: #fff;
     font-size: 24px;
     padding: 0;
     cursor: pointer;
 }
+button:hover {
+	background: rgba(63,63,63,0.8);
+}
 button.operator, button.equal {
     font-size: 26px;
 }
-button.negative {
+button.negative, button.positive {
     font-size: 22px;
 }
 button.clear {
@@ -105,10 +109,16 @@ button.wide {
     padding: 0 24px;
 }
 button.light-gray {
-	background: #8b8b8b;
+	background: rgba(139,139,139,1);
+}
+button.light-gray:hover {
+	background: rgba(139,139,139,0.85);
 }
 button.orange {
-	background: #fe9400;
+	background: rgba(254,148,0,1);
+}
+button.orange:hover {
+	background: rgba(254,148,0,0.9);
 }
 button:focus {
     outline: none;
